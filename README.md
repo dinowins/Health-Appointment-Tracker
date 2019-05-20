@@ -1,68 +1,104 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mango (Health Appointment Tracker)
 
-## Available Scripts
+1. [Description](#description)
+1. [Goals](#Goals)
+1. [Planning](#Planning)
+1. [Notes](#notes)
+1. [Installation](#Installation)
+1. [License](#license)
 
-In the project directory, you can run:
+### Description
 
-### `npm start`
+This is my capstone project for Epicodus to be created with React. It is inspired by my family and some of their challenges to keep track of their health appointments. This app is largely geared towards middle age and elderly people. This app will allow people to track their health appointments in chronological order as well as find the route and transportation (future goal) to their appointment. There will be a login aspect and the information will be stored in a MySQL database.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+May 3: Phase 1
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+8:00 - 10:00 Initial Planning
 
-### `npm test`
+10:00 - 11:00 Research differences between SQL and NoSQL; sticking with SQL because I will have static data
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+11:00 - 12:00 Watch and read how to use SQL with node JS
 
-### `npm run build`
+12:00 - 1:00 Lunch
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1:00 - 2:00 Research react native vs PWAs: conflicted on what to choose mostly because of who will download my app (international or domestic)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+2:00 - 3:00 Watch an uber api integration Youtube video and read through docs (looks like it will be difficult - stretch goal)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3:00 - 4:00 Look into hosting options: Heroku, AWS serverless, firebase, netlify (have to weigh cost vs learning oppurtunity)
 
-### `npm run eject`
+4:00 - 4:30 Research React styled-components libraries. Leaning towards Rebass since it's lightweight and easy to use
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+May 10: Phase 2
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8:00 - 3:00 Create static site
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3:00 - 4:30 Research implementing Google maps and uber api
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Goals
 
-## Learn More
+ __Tasks :__
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+         - [ ] Add appoinment
+         - [ ] Add Google Maps route from home location to appointment address
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ __MVP :__
 
-### Code Splitting
+         - [ ] Logo
+         - [ ] Login Page
+         - [ ] Sign-up Page
+         - [ ] Google maps routing
+         - [ ] Login Authentication
+         - [ ] Professional readme
+         - [ ] Routing
+         - [ ] Mobile friendly
+         - [ ] State Management
+         - [ ] History page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+ __Stretch Goals :__
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+         - [ ] make into PWA
+         - [ ] React Hook
+         - [ ] Add ability to link to or call uber
+         - [ ] Use oauth
+         - [ ] Show appointments on google calendar
+         - [ ] Offline Service/Storage
+         - [ ] Optimization
 
-### Making a Progressive Web App
+### User Stories
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* As a health care patient, I want to see when my next appointments are
+* As a user, I want to see the appointment information (date, doctor, reason for appointment, cost estimate) for planning and tracking purposes
+* As a user, I want to see my history of appointments so I can keep track of my health
 
-### Advanced Configuration
+### Planning
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+UI Initial Sketch
 
-### Deployment
+![](src/assets/images/userInterfaceSketch.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Component Hierarchy
 
-### `npm run build` fails to minify
+![](src/assets/images/ComponentTree.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## State Slices
+
+* Username
+* Password
+* masterAppointmentList
+* currentAppointmentList
+
+### Notes
+
+* Oauth is difficult to use.
+
+### Installation
+
+1. Clone or download this repository as zip
+2. `npm i` in terminal
+3. `npm run start`
+4. Visit http://localhost:8080/ in browser
+
+
+### License
