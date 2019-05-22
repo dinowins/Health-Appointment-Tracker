@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import AppointmentDetails from './components/appointments/AppointmentDetails';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
+import CreateAppointment from './components/appointments/CreateAppointment';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/appointments/:id' component={AppointmentDetails} />
         <Route path='/signin' component={SignIn} />
         <Route path='/signup' component={SignUp} />
+        <Route path='/create' component={CreateAppointment} />
       </Switch>
     </div>
     </BrowserRouter>
