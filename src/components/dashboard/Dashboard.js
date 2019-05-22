@@ -4,11 +4,15 @@ import AppointmentList from '../appointments/AppointmentList'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import { Redirect } from 'react-router-dom'
+
 
 class Dashboard extends Component {
   render(){
     //console.log(this.props)
-    const { appointments } = this.props;
+    const { appointments, auth } = this.props;
+    if (!auth.uid) return <Redirect to='/signin' />
+
     return (
       <div className="dashboard containter">
         <div className='row'>
@@ -27,7 +31,8 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
   console.log(state)
   return{
-    appointments: state.firestore.ordered.appointments
+    appointments: state.firestore.ordered.appointments,
+    auth: state.firebase.auth
   }
 }
 
