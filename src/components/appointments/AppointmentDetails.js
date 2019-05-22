@@ -16,6 +16,7 @@ const AppointmentDetails = (props) => {
           <div className='card-action grey lighten-4 grey-text'>
             <div>{ appointment.doctor }</div>
             <div>{ appointment.date }</div>
+            <div>{ appointment.time }</div>
           </div>
         </div>
       </div>
