@@ -17,9 +17,12 @@ const AppointmentDetails = (props) => {
             <p>{ appointment.content }</p>
           </div>
           <div className='card-action grey lighten-4 grey-text'>
-            <div>{ appointment.doctor }</div>
-            <div>{ appointment.date }</div>
-            <div>{ appointment.time }</div>
+            <div>Doctor:  { appointment.doctor }</div>
+            <div>Date: { appointment.date }</div>
+            <div>Time: { appointment.time }</div>
+            <div>Address: { appointment.address }</div>
+            <div>Reason for visit: { appointment.reasonForVist }</div>
+            <div>Notes: { appointment.notes }</div>
           </div>
         </div>
       </div>

@@ -7,10 +7,7 @@ const AppointmentSummary = ({appointment}) => {
         <span className='card-title'>{appointment.title}</span>
         <p className='grey-text'>{appointment.date}</p>
         <p className='grey-text'>{appointment.time}</p>
-        <p className='grey-text'>{appointment.doctor}</p>
         <p className='grey-text'>{appointment.address}</p>
-        <p className='grey-text'>{appointment.reasonForVisit}</p>
-        <p className='grey-text'>{appointment.notes}</p>
       </div>
     </div>
   )
