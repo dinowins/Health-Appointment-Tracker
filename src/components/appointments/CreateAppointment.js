@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createAppointment } from '../../store/actions/appointmentActions';
 
 class CreateAppointment extends Component {
   state = {
@@ -19,7 +21,8 @@ class CreateAppointment extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state)
+    //console.log(this.state)
+    this.props.createAppointment(this.state)
   }
   render() {
     return (
@@ -27,7 +30,7 @@ class CreateAppointment extends Component {
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className='grey-text text-darken-3'>Create New Appointment</h5>
           <div className='input-field'>
-            <label htmlFor='Title'>Title</label>
+            <label htmlFor='title'>Title</label>
             <input type='text' id='title' onChange={this.handleChange}/>
           </div>
           <div className='input-field'>
@@ -63,4 +66,10 @@ class CreateAppointment extends Component {
   }
 }
 
-export default CreateAppointment;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createAppointment: (appointment) => dispatch(createAppointment(appointment))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateAppointment);

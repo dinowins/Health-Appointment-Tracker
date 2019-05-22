@@ -7,6 +7,10 @@ const initState = {
 }
 
 const appointmentReducer = (state = initState, action) => {
+  switch (action.type) {
+    case "CREATE_APPOINTMENT":
+      console.log('created appointment', action.appointment)
+  }
   return state;
 }
 
