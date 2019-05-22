@@ -1,11 +1,17 @@
 import React from 'react'
 
-const AppointmentSummary = () => {
+const AppointmentSummary = ({appointment}) => {
   return (
     <div className="card z-depth-0 project-summary">
-      <span className='card-title'>Project Title</span>
-      <p>Posted by: Dino Nguyen</p>
-      <p className='grey-text'>3rd September, 2am</p>
+      <div className="card-content grey-text text-darken-3">
+        <span className='card-title'>{appointment.title}</span>
+        <p className='grey-text'>{appointment.date}</p>
+        <p className='grey-text'>{appointment.time}</p>
+        <p className='grey-text'>{appointment.doctor}</p>
+        <p className='grey-text'>{appointment.address}</p>
+        <p className='grey-text'>{appointment.reasonForVisit}</p>
+        <p className='grey-text'>{appointment.notes}</p>
+      </div>
     </div>
   )
 }

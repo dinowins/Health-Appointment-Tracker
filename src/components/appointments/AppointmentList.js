@@ -1,13 +1,14 @@
 import React from 'react'
 import AppointmentSummary from './AppointmentSummary'
 
-const AppointmentList = () => {
+const AppointmentList = ({appointments}) => {
   return (
     <div className="project-list section">
-      <AppointmentSummary />
-      <AppointmentSummary />
-      <AppointmentSummary />
-      <AppointmentSummary />
+      { appointments && appointments.map(appointment => {
+        return (
+          <AppointmentSummary appointment={appointment} key={appointment.id} />
+        )
+      })}
     </div>
   )
 }
