@@ -2,6 +2,7 @@ export  const createAppointment = (appointment) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     //make async call to database
     const firestore = getFirestore();
+    const profile = getState().firebase.profile
     firestore.collection('appointments').add({
       ...appointment,
       createdAt: new Date()
