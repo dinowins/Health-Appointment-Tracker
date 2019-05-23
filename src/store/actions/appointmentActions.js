@@ -5,7 +5,7 @@ export  const createAppointment = (appointment) => {
     const profile = getState().firebase.profile
     firestore.collection('appointments').add({
       ...appointment,
-      createdAt: new Date()
+      createdAt: new Date() 
     }).then(() => {
       dispatch({ type: 'CREATE_APPOINTMENT', appointment });
     }).catch((err) => {
