@@ -10,7 +10,6 @@ class CreateAppointment extends Component {
     time: '',
     doctor: '',
     address: '',
-    reasonForVisit: '',
     notes: ''
   }
 
@@ -43,7 +42,7 @@ class CreateAppointment extends Component {
             <input type='date' id='date' onChange={this.handleChange}/>
           </div>
           <div >
-            <label htmlFor='time'>Appointment Time (HH:MM AM/PM)</label>
+            <label htmlFor='time'>Appointment Time</label>
             <input type='time' id='time' onChange={this.handleChange}/>
           </div>
           <div className='input-field'>
@@ -53,10 +52,6 @@ class CreateAppointment extends Component {
           <div className='input-field'>
             <label htmlFor='address'>Address</label>
             <input type='text' id='address' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='text'>Reason for Visit</label>
-            <input type='text' id='reasonForVisit' onChange={this.handleChange}/>
           </div>
           <div className='input-field'>
             <label htmlFor='notes'>Notes</label>

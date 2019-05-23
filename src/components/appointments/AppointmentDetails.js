@@ -21,7 +21,6 @@ const AppointmentDetails = (props) => {
             <div>Date: { appointment.date }</div>
             <div>Time: { appointment.time }</div>
             <div>Address: { appointment.address }</div>
-            <div>Reason for visit: { appointment.reasonForVist }</div>
             <div>Notes: { appointment.notes }</div>
           </div>
         </div>
