@@ -1,4 +1,4 @@
-# Mango (Health Appointment Tracker)
+# Health Box (Health Appointment Tracker)
 
 1. [Description](#description)
 1. [Goals](#Goals)
