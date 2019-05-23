@@ -38,13 +38,13 @@ class CreateAppointment extends Component {
             <label htmlFor='title'>Title</label>
             <input type='text' id='title' onChange={this.handleChange}/>
           </div>
-          <div className='input-field'>
+          <div >
             <label htmlFor='date'>Appointment Date</label>
-            <input type='text' id='date' onChange={this.handleChange}/>
+            <input type='date' id='date' onChange={this.handleChange}/>
           </div>
-          <div className='input-field'>
-            <label htmlFor='time'>Appointment Time</label>
-            <input type='text' id='time' onChange={this.handleChange}/>
+          <div >
+            <label htmlFor='time'>Appointment Time (HH:MM AM/PM)</label>
+            <input type='time' id='time' onChange={this.handleChange}/>
           </div>
           <div className='input-field'>
             <label htmlFor='doctor'>Doctor</label>
